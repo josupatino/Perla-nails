@@ -1,0 +1,282 @@
+/* =========================
+   PERLA NAILS
+   ========================= */
+
+:root {
+    --cafe: #6D3C1C;
+    --crema: #E6D7C5;
+    --dorado: #B28051;
+    --blanco: #FFFDF9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: var(--crema);
+    color: var(--cafe);
+}
+
+
+/* =========================
+   ENCABEZADO
+   ========================= */
+
+header {
+    width: 100%;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--crema);
+    border-bottom: 1px solid rgba(109, 60, 28, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: var(--cafe);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cafe);
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--dorado);
+}
+
+
+/* =========================
+   INICIO
+   ========================= */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background:
+        linear-gradient(
+            rgba(230, 215, 197, 0.88),
+            rgba(230, 215, 197, 0.88)
+        );
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.small-title {
+    color: var(--dorado);
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 95px);
+    line-height: 0.95;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.hero h1 span {
+    color: var(--dorado);
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BOTONES
+   ========================= */
+
+.button {
+    display: inline-block;
+    padding: 16px 30px;
+    background: var(--cafe);
+    color: var(--blanco);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: var(--dorado);
+}
+
+
+/* =========================
+   SERVICIOS
+   ========================= */
+
+.services {
+    padding: 100px 10%;
+    background: var(--blanco);
+    text-align: center;
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: normal;
+    margin-bottom: 60px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 280px;
+    padding: 45px 30px;
+    border: 1px solid rgba(178, 128, 81, 0.5);
+    background: var(--crema);
+    transition: 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-8px);
+    border-color: var(--dorado);
+}
+
+.service h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.service p {
+    line-height: 1.6;
+}
+
+
+/* =========================
+   GALERÍA
+   ========================= */
+
+.gallery {
+    padding: 100px 10%;
+    text-align: center;
+    min-height: 400px;
+}
+
+.gallery p:last-child {
+    font-size: 18px;
+}
+
+
+/* =========================
+   CONTACTO
+   ========================= */
+
+.contact {
+    padding: 100px 10%;
+    background: var(--cafe);
+    color: var(--crema);
+    text-align: center;
+}
+
+.contact .small-title {
+    color: var(--dorado);
+}
+
+.contact h2 {
+    color: var(--crema);
+}
+
+.contact .button {
+    background: var(--dorado);
+}
+
+.contact .button:hover {
+    background: var(--crema);
+    color: var(--cafe);
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+   ========================= */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: var(--cafe);
+    color: var(--crema);
+    font-size: 13px;
+}
+
+
+/* =========================
+   CELULARES
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 80vh;
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    .service {
+        width: 100%;
+    }
+}
